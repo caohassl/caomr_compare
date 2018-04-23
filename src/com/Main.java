@@ -10,9 +10,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sample.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getClassLoader().getResource("sample.fxml"));
         Parent root = fxmlLoader.load();
-        primaryStage.setTitle("Caomr");
+        primaryStage.setTitle("SELECT THE MAX");
         primaryStage.setScene(new Scene(root, 600, 320));
         primaryStage.show();
     }
